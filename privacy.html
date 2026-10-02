@@ -26,7 +26,7 @@
 
 <main class="legal">
   <h1>Privacy Policy</h1>
-  <p class="updated">Effective 25 September 2026</p>
+  <p class="updated">Effective 2 October 2026</p>
 
   <p class="summary">Ebooks Player does not collect any personal data. There is no account, no analytics, no advertising and no tracking. Your books and reading progress stay on your device.</p>
 
@@ -42,8 +42,14 @@
   </ul>
   <p>If you keep books in iCloud Drive, Apple stores and syncs them under Apple's own privacy policy. Deleting the app removes the data stored in its folder.</p>
 
-  <h2>Camera (eye pause)</h2>
-  <p>Eye pause is optional and off by default. When you turn it on, the app asks for camera access and uses the front camera only to detect whether your eyes are open or closed, so reading can pause and resume. Frames are processed in real time on your device using Apple's ARKit or Vision frameworks. They are never recorded, stored or sent anywhere. You can turn eye pause off, or revoke camera access in Settings → Privacy &amp; Security → Camera, at any time.</p>
+  <h2 id="face-data">Face data and the TrueDepth camera (eye pause)</h2>
+  <p>Eye pause is an optional feature that is off by default. When you turn it on, reading pauses when you close your eyes or look away, and continues when you look back.</p>
+  <p><strong>What is used.</strong> On devices with a TrueDepth camera, the app uses Apple's ARKit face tracking and reads only two values from it: how closed your left eye is and how closed your right eye is (the <em>eyeBlinkLeft</em> and <em>eyeBlinkRight</em> values, each a number from 0 to 1), plus whether a face is in view. On other devices, the app uses Apple's Vision framework on the front camera to measure the shape of the eye outlines. No other face data is used: no face geometry, depth map, face mesh, facial expressions or identity.</p>
+  <p><strong>Purpose.</strong> These values are used only to decide, about 20 times per second, whether your eyes are closed, so the app can pause and resume reading. They are not used for identification, authentication, advertising, analytics or any other purpose.</p>
+  <p><strong>Storage and retention.</strong> Face data is processed in real time, in memory, on your device. It is never recorded, saved to disk, logged or backed up, and each value is discarded as soon as it has been compared. The only thing the app remembers is your eye pause setting (on or off).</p>
+  <p><strong>Sharing.</strong> Face data never leaves your device. It is not sent to the developer, to any server or to any third party.</p>
+  <p><strong>When the camera runs.</strong> Only while eye pause is on and a book is playing. It stops when you pause, when you leave the reader, when the app goes to the background, and after 5 minutes of eye pause.</p>
+  <p><strong>Deletion and control.</strong> Because no face data is stored, there is nothing to delete. You can turn eye pause off at any time with the eye button in the reader, or revoke camera access in Settings → Privacy &amp; Security → Camera.</p>
 
   <h2>Network requests</h2>
   <p>Reading works fully offline. The app connects to the internet only for these features:</p>
